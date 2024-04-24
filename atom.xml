@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>王子凌</title>
+  
+  <subtitle>陌上人如玉，公子世无双。 | Hello, world.</subtitle>
+  <link href="https://ling.im/atom.xml" rel="self"/>
+  
+  <link href="https://ling.im/"/>
+  <updated>2024-04-24T08:26:10.369Z</updated>
+  <id>https://ling.im/</id>
+  
+  <author>
+    <name>Sling Wang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 下 Node.js 提示端口已被占用</title>
+    <link href="https://ling.im/20240424/windows-unexpected-eaddrinuse/"/>
+    <id>https://ling.im/20240424/windows-unexpected-eaddrinuse/</id>
+    <published>2024-04-24T05:24:11.000Z</published>
+    <updated>2024-04-24T08:26:10.369Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="可能的错误信息如下："><a href="#可能的错误信息如下：" class="headerlink" title="可能的错误信息如下："></a>可能的错误信息如下：</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: listen EADDRINUSE: address already in use :::3000</span><br><span class="line"></span><br><span class="line">Error: listen EACCES permission denied :::3000</span><br></pre></td></tr></table></figure><h2 id="可能得解决办法："><a href="#可能得解决办法：" class="headerlink" title="可能得解决办法："></a>可能得解决办法：</h2><ol><li><code>3000</code> 端口确实已经被监听。<br>  <strong>&lt;管理员模式&gt;</strong> cmd 运行 <code>netstat -ano|findstr &quot;3000&quot;</code> ，然后找到对应的 <code>PID</code>，例如：<code>1314</code>，然后执行 <code>taskkill -PID 1314 -F </code>。即可解决。</li><li>也许是因为 Hyper-V 或者其他的容器服务保留了该3000端口。<br>  <strong>&lt;管理员模式&gt;</strong> cmd 运行 <code>net stop hns</code>，第一次执行时，会提示输入 <code>y</code> 确认。然后 cmd 运行 <code>net start hns</code>。即可解决。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;可能的错误信息如下：&quot;&gt;&lt;a href=&quot;#可能的错误信息如下：&quot; class=&quot;headerlink&quot; title=&quot;可能的错误信息如下：&quot;&gt;&lt;/a&gt;可能的错误信息如下：&lt;/h2&gt;&lt;figure class=&quot;highlight text&quot;&gt;&lt;table&gt;&lt;tr</summary>
+      
+    
+    
+    
+    <category term="杂项" scheme="https://ling.im/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    <category term="windows" scheme="https://ling.im/categories/%E6%9D%82%E9%A1%B9/windows/"/>
+    
+    
+    <category term="Node.js" scheme="https://ling.im/tags/Node-js/"/>
+    
+    <category term="Windows" scheme="https://ling.im/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, world!</title>
+    <link href="https://ling.im/20240423/hello-world/"/>
+    <id>https://ling.im/20240423/hello-world/</id>
+    <published>2024-04-23T14:16:05.000Z</published>
+    <updated>2024-04-24T08:26:10.369Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world!"></a>Hello world!</h1><p>Thanks for <a href="https://hexo.io/">hexo</a>, <a href="https://xaoxuu.com/wiki/stellar">hexo-them-stellar</a> and <a href="https://pages.github.com/">Github pages</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello world!&quot;&gt;&lt;/a&gt;Hello world!&lt;/h1&gt;&lt;p&gt;Thanks for &lt;a href=&quot;https://hexo</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
