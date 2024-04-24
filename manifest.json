@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f8f8f8",
+  "theme_color": "#1c1e21",
   "description": "Hello, world.",
   "icons": [
     {
