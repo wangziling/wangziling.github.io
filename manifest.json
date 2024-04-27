@@ -3,8 +3,8 @@
   "short_name": "Sling",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f8f8f8",
-  "theme_color": "#1c1e21",
+  "background_color": "#f3f3f3",
+  "theme_color": "#f8f8f8",
   "description": "Hello, world.",
   "icons": [
     {
